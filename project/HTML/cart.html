@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="../CSS/app.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">SportJersey</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jersey.html">Jerseys</a></li>
+        <li><a href="cart.html">Cart 🛒</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="cart-modal">
+    <h3>Your Cart</h3>
+    <div class="cart-items" id="cartItems"></div>
+    <p><strong>Total: ₹<span id="cartTotal">0</span></strong></p>
+    <button id="purchaseBtn" class="btn">Purchase</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SportzJersey. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function loadCart() {
+      const cartContainer = document.getElementById("cartItems");
+      const cartTotal = document.getElementById("cartTotal");
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      cartContainer.innerHTML = "";
+      let total = 0;
+
+      if (cart.length === 0) {
+        cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+        cartTotal.textContent = "0";
+        document.getElementById("purchaseBtn").style.display = "none";
+        return;
+      }
+
+      cart.forEach((item, index) => {
+        total += item.price;
+        const itemDiv = document.createElement("div");
+        itemDiv.classList.add("cart-item");
+        itemDiv.innerHTML = `
+          <p><strong>${item.name}</strong> - ₹${item.price}</p>
+          <button onclick="removeItem(${index})">Remove</button>
+        `;
+        cartContainer.appendChild(itemDiv);
+      });
+
+      cartTotal.textContent = total;
+      document.getElementById("purchaseBtn").style.display = "block";
+    }
+
+    function removeItem(index) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      loadCart();
+    }
+
+    function handlePurchase() {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      if (cart.length === 0) return;
+
+      alert("Thank you for your purchase!");
+      localStorage.removeItem("cart");
+      loadCart();
+    }
+
+    document.getElementById("purchaseBtn").addEventListener("click", handlePurchase);
+
+    window.onload = loadCart;
+  </script>
+</body>
+</html>

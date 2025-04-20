@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jerseys - SportzJersey</title>
+  <link rel="stylesheet" href="../CSS/app.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">SportJersey</div>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./jersey.html">Jerseys</a></li>
+        <li><a href="./cart.html">Cart 🛒</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Jerseys Section -->
+  <section class="jerseys" id="jersey-section">
+    <h2>Our Jersey Collection</h2>
+
+    <!-- IPL Jerseys -->
+    <h3>IPL Jerseys</h3>
+    <div class="jersey-grid">
+      <div class="jersey-card">
+        <img src="../pr_image/virat.jpeg" alt="Virat Kohli RCB" />
+        <h3>Virat Kohli - RCB</h3>
+        <p>₹900</p>
+        <button onclick="addToCart('Virat Kohli - RCB', 999)">Add to Cart</button>
+      </div>
+      <div class="jersey-card">
+        <img src="../pr_image/dhoni.jpg" alt="MS Dhoni CSK" />
+        <h3>MS Dhoni - CSK</h3>
+        <p>₹999</p>
+        <button onclick="addToCart('MS Dhoni - CSK', 999)">Add to Cart</button>
+      </div>
+      <div class="jersey-card">
+        <img src="../pr_image/rohit.jpeg" alt="Rohit Mumbai" />
+        <h3>Rohit Sharma - MI</h3>
+        <p>₹950</p>
+        <button onclick="addToCart('Rohit Sharma - MI', 950)">Add to Cart</button>
+      </div>
+      <div class="jersey-card">
+        <img src="../pr_image/pant.jpeg" alt=" PANT LSG" />
+        <h3>PANT - LSG</h3>
+        <p>₹900</p>
+        <button onclick="addToCart('PANT - LSG', 900)">Add to Cart</button>
+      </div>
+      <div class="jersey-card">
+        <img src="../pr_image/Hardik.jpeg" alt="Hardik MI" />
+        <h3>Hardik - MI</h3>
+        <p>₹899</p>
+        <button onclick="addToCart('HARDIK - DC', 899)">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- ISL Jerseys -->
+    <h3>ISL Jerseys</h3>
+    <div class="jersey-grid">
+      <div class="jersey-card">
+        <img src="../pr_image/chhetri.jpeg" alt="Sunil Chhetri" />
+        <h3>Sunil Chhetri - BFC</h3>
+        <p>₹899</p>
+        <button onclick="addToCart('Sunil Chhetri - BFC', 899)">Add to Cart</button>
+      </div>
+      <div class="jersey-card">
+        <img src="../pr_image/sahal.webp" alt="Sahal Abdul Samad" />
+        <h3>Sahal A. Samad - KBFC</h3>
+        <p>₹870</p>
+        <button onclick="addToCart('Sahal A. Samad - KBFC', 870)">Add to Cart</button>
+      </div>
+      <div class="jersey-card">
+        <img src="../pr_image/atk.jpg" alt="Roy Krishna" />
+        <h3>Roy Krishna - ATK</h3>
+        <p>₹880</p>
+        <button onclick="addToCart('Roy Krishna - ATK', 880)">Add to Cart</button>
+      </div>
+      <div class="jersey-card">
+        <img src="../pr_image/udanta.jpeg" alt="Udanta Singh" />
+        <h3>Udanta Singh - BFC</h3>
+        <p>₹860</p>
+        <button onclick="addToCart('Udanta Singh - BFC', 860)">Add to Cart</button>
+      </div>
+      <div class="jersey-card">
+        <img src="../pr_image/fc.jpeg" alt="Brandon Fernandes" />
+        <h3>Brandon Fernandes - FC Goa</h3>
+        <p>₹850</p>
+        <button onclick="addToCart('Brandon Fernandes - FC Goa', 850)">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- India Jerseys -->
+    <h3>India Jerseys</h3>
+    <div class="jersey-grid">
+      <div class="jersey-card">
+        <img src="../pr_image/rohit2.jpeg" alt="Rohit India" />
+        <h3>Rohit Sharma - India</h3>
+        <p>₹1099</p>
+        <button onclick="addToCart('Rohit Sharma - India', 1099)">Add to Cart</button>
+      </div>
+      <div class="jersey-card">
+        <img src="../pr_image/virat.webp" alt="Virat India" />
+        <h3>Virat Kohli - India</h3>
+        <p>₹1099</p>
+        <button onclick="addToCart('Virat Kohli - India', 1099)">Add to Cart</button>
+      </div>
+      <div class="jersey-card">
+        <img src="../pr_image/bumrah.jpeg" alt="Jasprit Bumrah" />
+        <h3>Jasprit Bumrah - India</h3>
+        <p>₹1050</p>
+        <button onclick="addToCart('Jasprit Bumrah - India', 1050)">Add to Cart</button>
+      </div>
+      <div class="jersey-card">
+        <img src="../pr_image/Gill2.jpeg" alt="Shubman Gill" />
+        <h3>Shubman Gill - India</h3>
+        <p>₹1020</p>
+        <button onclick="addToCart('Shubman Gill - India', 1020)">Add to Cart</button>
+      </div>
+      <div class="jersey-card">
+        <img src="../pr_image/hardik2.jpeg" alt="Hardik Pandya" />
+        <h3>Hardik Pandya - India</h3>
+        <p>₹1010</p>
+        <button onclick="addToCart('Hardik Pandya - India', 1010)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 SportzJersey. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="../JS/app.js"></script>
+</body>
+</html>
